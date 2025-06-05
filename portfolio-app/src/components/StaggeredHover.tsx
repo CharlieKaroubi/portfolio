@@ -10,7 +10,15 @@ export default function StaggeredHover({children, className}: {children: string;
     <motion.div
         initial = "initial"
         whileHover= "hovered"
-        className = {"relative block overflow-hidden whitespace-nowrap" + " " + className}
+        className = {"relative block overflow-hidden whitespace-nowrap text-black" + " " + className}
+        style={{
+            textShadow: `
+              -3px -3px 0 #1e40af,
+               3px -3px 0 #1e40af,
+              -3px  3px 0 #1e40af,
+               3px  3px 0 #1e40af
+            `,
+          }}
     >
         <div>{children.split("").map((l,i) => {
             return <motion.span 
