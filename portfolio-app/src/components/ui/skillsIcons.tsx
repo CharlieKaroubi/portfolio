@@ -19,7 +19,7 @@ export default function SkillsIcons() {
     }, []);
 
     return (
-        <div className="flex flex-wrap gap-x-10 gap-y-10 items-center justify-center w-[80vw]">
+        <div className="mt-10 flex flex-wrap gap-x-10 gap-y-10 items-center justify-center w-[80vw]">
             
             <svg 
                 id="java" 
@@ -225,6 +225,25 @@ export default function SkillsIcons() {
                 <path stroke="#007ACC" strokeWidth="1.5" fill="" d="m123.471 114.181-26.374 12.698A7.973 7.973 0 0 1 88 125.333L1.662 46.613a5.333 5.333 0 0 1 .006-7.887l7.052-6.411a5.333 5.333 0 0 1 6.811-.303l103.971 78.874c3.488 2.647 8.498.159 8.498-4.219v.306a8.001 8.001 0 0 1-4.529 7.208Z"></path>
                 <path stroke="#1F9CF0" strokeWidth="1.5" fill="" d="M97.098 126.882A7.977 7.977 0 0 1 88 125.333c2.952 2.952 8 .861 8-3.314V5.98c0-4.175-5.048-6.266-8-3.313a7.977 7.977 0 0 1 9.098-1.549L123.467 13.8A8 8 0 0 1 128 21.01v85.982a8 8 0 0 1-4.533 7.21l-26.369 12.681Z"></path>
             </svg>
+
+            
+            <svg 
+                id="intellij" 
+                viewBox="0 0 128 128" 
+                height={dynamicSize} 
+                width={dynamicSize}
+                className="hover:animate-draw"
+            >
+                
+                <path stroke="#087cfa" strokeWidth="1.5" fill="" d="M23.492 88.027 6.277 74.434 16.41 55.676l15.223 5.094Zm0 0"></path> 
+                <path stroke="#087cfa" strokeWidth="1.5" fill="" d="m121.988 36.68-2.105 67.78L74.8 122.517l-24.55-15.849Zm0 0"></path> 
+                <path stroke="#087cfa" strokeWidth="1.5" fill="" d="M121.988 36.68 99.68 58.44 71.035 23.297l14.14-15.899Zm0 0"></path> 
+                <path stroke="#087cfa" strokeWidth="1.5" fill="" d="m50.25 106.668-35.852 12.957 7.508-26.293 9.727-32.562L4.96 51.848 21.906 5.484l38.301 4.524L99.68 58.44Zm0 0"></path>
+                <path stroke="#000" strokeWidth="1.5" fill="" d="M27.43 27.43h73.14v73.14H27.43Zm0 0"></path> 
+                <path stroke="#fff" strokeWidth="1.5" fill="" d="M36.547 86.746h27.43v4.574h-27.43Zm13.691-45.152v-4.996h-13.64v4.996h3.824v17.261h-3.824v5h13.64v-5h-3.816V41.594Zm13.078 22.648a10.802 10.802 0 0 1-5.351-1.219 12.299 12.299 0 0 1-3.559-2.875l3.766-4.207c.687.778 1.484 1.45 2.367 2a4.849 4.849 0 0 0 2.621.73 3.46 3.46 0 0 0 2.668-1.058 5.07 5.07 0 0 0 .977-3.449V36.57h6.093v17.86a12.384 12.384 0 0 1-.668 4.254 7.919 7.919 0 0 1-4.964 4.879 12.097 12.097 0 0 1-4.036.632"></path>
+
+            </svg>
+          
           
         </div>
     )

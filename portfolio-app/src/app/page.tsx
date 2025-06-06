@@ -3,6 +3,28 @@ import StarfieldBackground from "@/components/StarfieldBackground";
 import StaggeredHover from "@/components/StaggeredHover";
 import SkillsIcons from "@/components/ui/skillsIcons";
 import Navbar from "@/components/ui/Navbar";
+import DecryptedText from "@/components/TextAnimations/DecryptedText/DecryptedText";
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+
+import {
+  Card,
+  CardAction,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+
+import { experiences } from "@/lib/experiences";
+import ExperienceCard from "@/components/ui/ExperienceCard";
 
 export default function Home() {
   return (
@@ -11,13 +33,38 @@ export default function Home() {
     <main className="h-[100vh] snap-y snap-mandatory overflow-y-scroll scroll-smooth">
       <section id="home" className="snap-start flex flex-col items-center justify-center min-h-screen text-center text-[8vw] sm:text-[8vw] md:text-[5vw]">
         <div className="mb-30">
-          <h1>Hello, I'm <StaggeredHover className="text-black">Charlie Karoubi</StaggeredHover></h1>
-          <h1>I'm an aspiring <StaggeredHover className="text-black">Software Engineer</StaggeredHover></h1>
+          <h1>Hello, I'm <span className="text-blue-800 font-bold"><DecryptedText text="Charlie Karoubi"
+            speed={50}
+            maxIterations={15}
+            characters="ABCD1234!?"
+            className="revealed"
+            parentClassName="all-letters"
+            encryptedClassName="encrypted"
+          >
+          </DecryptedText></span>
+          </h1>
+          <h1>I'm an aspiring <span className="text-blue-800 font-bold"><DecryptedText text="Software Engineer"
+            speed={50}
+            maxIterations={15}
+            characters="ABCD1234!?"
+            className="revealed"
+            parentClassName="all-letters"
+            encryptedClassName="encrypted"
+          >
+          </DecryptedText></span></h1>
         </div>
       </section>
       <section id="about" className="snap-start flex flex-col items-center justify-center min-h-screen text-center md:mx-10 mx-5">
         <div className="mb-30">
-          <StaggeredHover className="text-[10vw] sm:text-[8vw] md:text-[5vw] mb-5">About</StaggeredHover>
+          <span className="text-[10vw] sm:text-[8vw] md:text-[5vw] mb-10 text-blue-800 font-bold"><DecryptedText text="About"
+            speed={50}
+            maxIterations={15}
+            characters="ABCD1234!?"
+            className="revealed"
+            parentClassName="all-letters"
+            encryptedClassName="encrypted"
+          >
+          </DecryptedText></span>
           <p className="text-[4vw] sm:text-[3.5w] md:text-[2.5vw]">
             I'm a Sophomore Computer Science student at Rice University with a passion for building scalable, 
             secure, and impactful backend systems. I'm always exploring new technologies and methods to optimize 
@@ -27,16 +74,36 @@ export default function Home() {
         </div>
       </section>
       <section id="skills" className="snap-start flex flex-col items-center justify-center min-h-screen text-center">
-        <div className="mb-25">
-        <StaggeredHover className="text-[10vw] sm:text-[8vw] md:text-[5vw] mb-10">Skills</StaggeredHover>
+        <div className="mb-10">
+          <span className="text-[10vw] sm:text-[8vw] md:text-[5vw] mb-10 text-blue-800 font-bold">
+            <DecryptedText 
+              text="Skills"
+              speed={50}
+              maxIterations={15}
+              characters="ABCD1234!?"
+              className="revealed"
+              parentClassName="all-letters"
+              encryptedClassName="encrypted"
+          >
+          </DecryptedText></span>
         <SkillsIcons></SkillsIcons>
         </div>
       </section>
       <section id="experience" className="snap-start flex flex-col items-center justify-center min-h-screen text-center">
-        <StaggeredHover className="text-[10vw] sm:text-[8vw] md:text-[5vw] ">Experience</StaggeredHover>
-        <p className="text-[5vw] sm:text-[4.5vw] md:text-[3vw]">
-          
-        </p>
+        <div className="mt-6">
+        <StaggeredHover className="text-[10vw] sm:text-[8vw] md:text-[5vw] mb-2">Experience</StaggeredHover>
+          <div className="grid gap-6 md:grid-cols-2">
+          {experiences.map((exp, i) => (
+            <ExperienceCard
+              key={i}
+              title={exp.title}
+              org={exp.company}
+              date={exp.date}
+              description={exp.description}
+            />
+          ))}
+          </div>
+        </div>
       </section>
     </main>
     </StarfieldBackground>
