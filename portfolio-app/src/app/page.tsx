@@ -4,6 +4,7 @@ import StaggeredHover from "@/components/StaggeredHover";
 import SkillsIcons from "@/components/ui/skillsIcons";
 import Navbar from "@/components/ui/Navbar";
 import DecryptedText from "@/components/TextAnimations/DecryptedText/DecryptedText";
+import SplitText from "@/components/TextAnimations/SplitText/SplitText";
 
 import {
   Carousel,
@@ -85,13 +86,25 @@ export default function Home() {
               parentClassName="all-letters"
               encryptedClassName="encrypted"
           >
-          </DecryptedText></span>
+          </DecryptedText>
+          </span>
         <SkillsIcons></SkillsIcons>
         </div>
       </section>
       <section id="experience" className="snap-start flex flex-col items-center justify-center min-h-screen text-center">
-        <div className="mt-6">
-        <StaggeredHover className="text-[10vw] sm:text-[8vw] md:text-[5vw] mb-2">Experience</StaggeredHover>
+        <div className="">
+        <span className="text-[10vw] sm:text-[8vw] md:text-[5vw] mb-10 text-blue-800 font-bold">
+            <DecryptedText 
+              text="Experience"
+              speed={50}
+              maxIterations={15}
+              characters="ABCD1234!?"
+              className="revealed"
+              parentClassName="all-letters"
+              encryptedClassName="encrypted"
+          >
+          </DecryptedText>
+          </span>
           <div className="grid gap-6 md:grid-cols-2">
           {experiences.map((exp, i) => (
             <ExperienceCard

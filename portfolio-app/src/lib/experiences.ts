@@ -4,7 +4,7 @@ export const experiences = [
         company: "Clover",
         date: "June 2025 - August 2025",
         location: "Sunnyvale, CA",
-        description: "Building micorservices in Spring Boot for Clover's Card Services team"
+        description: "Building microservices in Spring Boot for Clover's Card Services team"
     },
     {
         title: "Software Engineer",
