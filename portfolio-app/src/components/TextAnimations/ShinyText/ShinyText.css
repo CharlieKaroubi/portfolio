@@ -1,28 +1,27 @@
 .shiny-text {
-    color: #2b67c7e4; /* Adjust this color to change intensity/style */
+    color: #478bf8e4; /* Keep the base text color */
     background: linear-gradient(
       120deg,
-      rgba(255, 255, 255, 0) 40%,
-      rgba(255, 255, 255, 0.8) 50%,
-      rgba(255, 255, 255, 0) 60%
+      rgba(71, 139, 248, 0) 40%, /* Transparent blue */
+      rgba(255, 255, 255, 0.9) 50%, /* Bright white for the shine */
+      rgba(71, 139, 248, 0) 60% /* Transparent blue */
     );
     background-size: 200% 100%;
     -webkit-background-clip: text;
     background-clip: text;
     display: inline-block;
-    animation: shine 5s linear infinite;
+    animation: shine 5s ease-in-out infinite; /* Faster and smoother animation */
   }
   
   @keyframes shine {
     0% {
-      background-position: 100%;
+      background-position: 100%; /* Start the shine off-screen */
     }
     100% {
-      background-position: -100%;
+      background-position: -100%; /* Move the shine across the text */
     }
   }
   
   .shiny-text.disabled {
     animation: none;
   }
-  

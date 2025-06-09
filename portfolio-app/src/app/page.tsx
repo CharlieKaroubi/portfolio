@@ -1,28 +1,9 @@
 'use client';
 import StarfieldBackground from "@/components/StarfieldBackground";
-import StaggeredHover from "@/components/StaggeredHover";
 import SkillsIcons from "@/components/ui/skillsIcons";
 import Navbar from "@/components/ui/Navbar";
 import DecryptedText from "@/components/TextAnimations/DecryptedText/DecryptedText";
-import SplitText from "@/components/TextAnimations/SplitText/SplitText";
 
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
-
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
 
 import { experiences } from "@/lib/experiences";
 import ExperienceCard from "@/components/ui/ExperienceCard";
@@ -93,7 +74,7 @@ export default function Home() {
       </section>
       <section id="experience" className="snap-start flex flex-col items-center justify-center min-h-screen text-center">
         <div className="">
-        <span className="text-[10vw] sm:text-[8vw] md:text-[5vw] mb-10 text-blue-800 font-bold">
+        <span className="text-[10vw] sm:text-[8vw] md:text-[5vw] text-blue-800 font-bold">
             <DecryptedText 
               text="Experience"
               speed={50}
