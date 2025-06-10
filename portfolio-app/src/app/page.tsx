@@ -73,8 +73,8 @@ export default function Home() {
         </div>
       </section>
       <section id="experience" className="snap-start flex flex-col items-center justify-center min-h-screen text-center">
-        <div className="">
-        <span className="text-[10vw] sm:text-[8vw] md:text-[5vw] text-blue-800 font-bold">
+        <div className="mt-10">
+          <span className="text-[10vw] sm:text-[8vw] md:text-[5vw] text-blue-800 font-bold">
             <DecryptedText 
               text="Experience"
               speed={50}
@@ -86,7 +86,7 @@ export default function Home() {
           >
           </DecryptedText>
           </span>
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-4">
           {experiences.map((exp, i) => (
             <ExperienceCard
               key={i}
