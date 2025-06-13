@@ -8,9 +8,10 @@ type ExperienceCardProps = {
   org: string;
   date: string;
   description: string;
+  imageUrl: string;
 };
 
-export default function ExperienceCard({ title, org, date, description }: ExperienceCardProps) {
+export default function ExperienceCard({ title, org, date, description, imageUrl }: ExperienceCardProps) {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -21,7 +22,7 @@ export default function ExperienceCard({ title, org, date, description }: Experi
   return (
     <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <PixelCard variant="default">
-        <div className="max-w-xl p-3 flex flex-col justify-between h-full absolute">
+        <div className="max-w-xl p-4 flex flex-col justify-between h-full absolute">
           {/* Non-hovered content */}
           <div
             className={`transition-opacity duration-1500 ${
@@ -46,10 +47,11 @@ export default function ExperienceCard({ title, org, date, description }: Experi
           >
             <p className="text-blue-100 font-bold text-[5vh] text-center">{org}</p>
             <Image
-              src="/orgImages/clover-svgrepo-com.svg"
+              src={imageUrl}
               width="70"
               height="70"
               alt="Org Logo"
+              className="mt-2"
             />
           </div>
           

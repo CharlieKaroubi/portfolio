@@ -94,6 +94,7 @@ export default function Home() {
               org={exp.company}
               date={exp.date}
               description={exp.description}
+              imageUrl={exp.imageUrl}
             />
           ))}
           </div>
