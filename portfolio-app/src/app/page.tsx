@@ -9,6 +9,8 @@ import {projects} from "@/lib/projects";
 import { experiences } from "@/lib/experiences";
 import Footer from "@/components/ui/Footer";
 
+const MAX_ITERATIONS = 10;
+
 export default function Home() {
   return (
     <StarfieldBackground>
@@ -26,7 +28,7 @@ export default function Home() {
                 <DecryptedText
                   text="Charlie Karoubi"
                   speed={50}
-                  maxIterations={15}
+                  maxIterations={MAX_ITERATIONS}
                   characters="ABCD1234!?"
                   className="revealed"
                   parentClassName="all-letters"
@@ -40,7 +42,7 @@ export default function Home() {
                 <DecryptedText
                   text="Software Engineer"
                   speed={50}
-                  maxIterations={15}
+                  maxIterations={MAX_ITERATIONS}
                   characters="ABCD1234!?"
                   className="revealed"
                   parentClassName="all-letters"
@@ -61,7 +63,7 @@ export default function Home() {
         <div className="mb-30">
           <span className="text-[10vw] sm:text-[8vw] md:text-[5vw] mb-10 text-blue-800 font-bold"><DecryptedText text="About"
             speed={50}
-            maxIterations={15}
+            maxIterations={MAX_ITERATIONS}
             characters="ABCD1234!?"
             className="revealed"
             parentClassName="all-letters"
@@ -85,7 +87,7 @@ export default function Home() {
             <DecryptedText 
               text="Skills"
               speed={50}
-              maxIterations={15}
+              maxIterations={MAX_ITERATIONS}
               characters="ABCD1234!?"
               className="revealed"
               parentClassName="all-letters"
@@ -103,7 +105,7 @@ export default function Home() {
               <DecryptedText 
                 text="Experience"
                 speed={50}
-                maxIterations={15}
+                maxIterations={MAX_ITERATIONS}
                 characters="ABCD1234!?"
                 className="revealed"
                 parentClassName="all-letters"
@@ -131,7 +133,7 @@ export default function Home() {
           <DecryptedText 
             text="Projects"
             speed={50}
-            maxIterations={15}
+            maxIterations={MAX_ITERATIONS}
             characters="ABCD1234!?"
             className="revealed"
             parentClassName="all-letters"
