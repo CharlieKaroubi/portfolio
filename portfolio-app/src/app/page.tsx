@@ -3,10 +3,10 @@ import StarfieldBackground from "@/components/StarfieldBackground";
 import SkillsIcons from "@/components/ui/skillsIcons";
 import Navbar from "@/components/ui/Navbar";
 import DecryptedText from "@/components/TextAnimations/DecryptedText/DecryptedText";
-
-
-import { experiences } from "@/lib/experiences";
+import InfiniteMenu from "@/components/Components/InfiniteMenu/InfiniteMenu";
 import ExperienceCard from "@/components/ui/ExperienceCard";
+import {projects} from "@/lib/projects";
+import { experiences } from "@/lib/experiences";
 
 export default function Home() {
   return (
@@ -57,7 +57,7 @@ export default function Home() {
       </section>
       <section id="skills" className="snap-start flex flex-col items-center justify-center min-h-screen text-center">
         <div className="mb-10">
-          <span className="text-[10vw] sm:text-[8vw] md:text-[5vw] mb-10 text-blue-800 font-bold">
+          <span className="text-[10vw] sm:text-[8vw] md:text-[5vw] text-blue-800 font-bold">
             <DecryptedText 
               text="Skills"
               speed={50}
@@ -74,18 +74,20 @@ export default function Home() {
       </section>
       <section id="experience" className="snap-start flex flex-col items-center justify-center min-h-screen text-center">
         <div className="mt-10">
-          <span className="text-[10vw] sm:text-[8vw] md:text-[5vw] text-blue-800 font-bold">
-            <DecryptedText 
-              text="Experience"
-              speed={50}
-              maxIterations={15}
-              characters="ABCD1234!?"
-              className="revealed"
-              parentClassName="all-letters"
-              encryptedClassName="encrypted"
-          >
-          </DecryptedText>
-          </span>
+           <div className="mb-5">
+            <span className="text-[10vw] sm:text-[8vw] md:text-[5vw] text-blue-800 font-bold">
+              <DecryptedText 
+                text="Experience"
+                speed={50}
+                maxIterations={15}
+                characters="ABCD1234!?"
+                className="revealed"
+                parentClassName="all-letters"
+                encryptedClassName="encrypted"
+            >
+            </DecryptedText>
+            </span>
+            </div>
           <div className="grid gap-6 md:grid-cols-4">
           {experiences.map((exp, i) => (
             <ExperienceCard
@@ -98,6 +100,23 @@ export default function Home() {
             />
           ))}
           </div>
+        </div>
+      </section>
+      <section id="projects" className="snap-start flex flex-col items-center justify-center min-h-screen text-center">
+        <span className="text-[10vw] sm:text-[8vw] md:text-[5vw] text-blue-800 font-bold">
+          <DecryptedText 
+            text="Projects"
+            speed={50}
+            maxIterations={15}
+            characters="ABCD1234!?"
+            className="revealed"
+            parentClassName="all-letters"
+            encryptedClassName="encrypted"
+        >
+        </DecryptedText>
+        </span>
+        <div className="relative h-[80vh] w-full">
+          <InfiniteMenu items={projects}/>
         </div>
       </section>
     </main>

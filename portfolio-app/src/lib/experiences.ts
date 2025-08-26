@@ -5,7 +5,7 @@ export const experiences = [
         date: "June 2025 - August 2025",
         location: "Sunnyvale, CA",
         description: "Building microservices in Spring Boot for Clover's Card Services team",
-        imageUrl: "/orgImages/clover-svgrepo-com.svg"
+        imageUrl: "/orgImages/clovernetwork_logo.jpeg"
     },
     {
         title: "Software Engineer",

@@ -45,13 +45,14 @@ export default function ExperienceCard({ title, org, date, description, imageUrl
               isHovered ? "opacity-100" : "opacity-0"
             }`}
           >
-            <p className="text-blue-100 font-bold text-[5vh] text-center">{org}</p>
+            <p className="text-blue-100 font-bold text-[4.5vh] text-center">{org}</p>
             <Image
               src={imageUrl}
               width="70"
               height="70"
               alt="Org Logo"
               className="mt-2"
+              style = {{ borderRadius: "50%" }}
             />
           </div>
           
