@@ -17,9 +17,6 @@ export default function Navbar() {
         <li>
           <a href="#projects" className="hover:text-blue-800 transition-colors duration-300">Projects</a>
         </li>
-        <li>
-          <a href="#contact" className="hover:text-blue-800 transition-colors duration-300">Contact</a>
-        </li>
       </ul>
     </nav>
     )

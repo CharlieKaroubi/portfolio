@@ -1303,7 +1303,7 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [] }) => {
             className={`
           select-none
           font-black
-          text-[5vh]
+          text-[3.5vh]
           transition-all
           ease-[cubic-bezier(0.25,0.1,0.25,1.0)]
           ${

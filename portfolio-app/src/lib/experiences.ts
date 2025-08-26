@@ -1,10 +1,10 @@
 export const experiences = [
     {
-        title: "Incoming Software Engineer Intern",
+        title: "Software Engineer Intern",
         company: "Clover",
         date: "June 2025 - August 2025",
         location: "Sunnyvale, CA",
-        description: "Building microservices in Spring Boot for Clover's Card Services team",
+        description: "Designed and developed a Vector Search API using Vertex AI, MongoDB, and Spring Boot. Optimized the migration of 40,000+ Clover merchant websites by writing algorithms that identify and delete duplicate websites on application startup. Enhanced the SEO of merchant websites by implementing metadescription and item page URL generation algorithms.",
         imageUrl: "/orgImages/clovernetwork_logo.jpeg"
     },
     {
