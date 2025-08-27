@@ -1296,22 +1296,22 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [] }) => {
           <h2
             style={{
               position: "absolute",
-              top: "17%",
+              top: "calc(50% - 4.5em)", // Dynamically position the title closer to the planet
               left: "50%",
-              transform: "translate(-50%, -100%)", 
+              transform: "translate(-50%, -100%)", // Center horizontally and adjust vertically
             }}
             className={`
-          select-none
-          font-black
-          text-[3.5vh]
-          transition-all
-          ease-[cubic-bezier(0.25,0.1,0.25,1.0)]
-          ${
-            isMoving
-              ? "opacity-0 pointer-events-none duration-[100ms]"
-              : "opacity-100 pointer-events-auto duration-[500ms]"
-          }
-        `}
+    select-none
+    font-black
+    text-[3.5vh]
+    transition-all
+    ease-[cubic-bezier(0.25,0.1,0.25,1.0)]
+    ${
+      isMoving
+        ? "opacity-0 pointer-events-none duration-[100ms]"
+        : "opacity-100 pointer-events-auto duration-[500ms]"
+    }
+  `}
           >
             {activeItem.title}
           </h2>
