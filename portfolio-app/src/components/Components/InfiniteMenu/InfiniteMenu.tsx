@@ -1293,81 +1293,90 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [] }) => {
 
       {activeItem && (
         <>
-          <h2
-            style={{
-              position: "absolute",
-              top: "calc(50% - 4.5em)", // Dynamically position the title closer to the planet
-              left: "50%",
-              transform: "translate(-50%, -100%)", // Center horizontally and adjust vertically
-            }}
-            className={`
-    select-none
-    font-black
-    text-[3.5vh]
-    transition-all
-    ease-[cubic-bezier(0.25,0.1,0.25,1.0)]
-    ${
-      isMoving
-        ? "opacity-0 pointer-events-none duration-[100ms]"
-        : "opacity-100 pointer-events-auto duration-[500ms]"
-    }
-  `}
-          >
-            {activeItem.title}
-          </h2>
-
-          <p
+          {/* Title and Description Container */}
+          <div
             style={{
               position: "absolute",
               top: "50%", // Center vertically
               left: "50%", // Center horizontally
-              transform: "translate(-50%, -50%)", // Center the description relative to its own dimensions
-              textShadow: "2px 2px 4px rgba(0, 0, 0, 1.5)", // Add a dark shadow
+              transform: "translate(-50%, -50%)", // Center relative to its own dimensions
+              textShadow: "4px 4px 8px rgba(0, 0, 0, 1.5)",
             }}
-            className={`
-              select-none
-              max-w-[25ch]
-              text-[3vw]
-              md:text-[1.5vw]
-              lg:text-[1.4vw]
-              text-center
-              transition-all
-              ease-[cubic-bezier(0.25,0.1,0.25,1.0)]
-              text-white
-              font-extrabold
-              ${
-                isMoving
-                  ? "opacity-0 pointer-events-none duration-[100ms]"
-                  : "opacity-100 pointer-events-auto duration-[500ms]"
-              }
-  `}
+            className="text-center"
           >
-            {activeItem.description}
-          </p>
+            {/* Title */}
+            <h2
+              className={`
+                select-none
+                font-black
+                text-[2.2vh]
+                sm:text-[vw]
+                md:text-[4vh]
+                lg:text-[4vh]
+                text-white
+                transition-all
+                ease-[cubic-bezier(0.25,0.1,0.25,1.0)]
+                ${
+                  isMoving
+                    ? "opacity-0 pointer-events-none duration-[100ms]"
+                    : "opacity-100 pointer-events-auto duration-[500ms]"
+                }
+              `}
+            >
+              {activeItem.title}
+            </h2>
 
+            {/* Description */}
+            <p
+              className={`
+                select-none
+                max-w-[25ch]
+                text-[3vw]
+                md:text-[1.5vw]
+                lg:text-[1.4vw]
+                text-white
+                font-extrabold
+                transition-all
+                ease-[cubic-bezier(0.25,0.1,0.25,1.0)]
+                ${
+                  isMoving
+                    ? "opacity-0 pointer-events-none duration-[100ms]"
+                    : "opacity-100 pointer-events-auto duration-[500ms]"
+                }
+              `}
+              style={{
+                marginTop: "1em", // Add spacing between title and description
+                textShadow: "4px 4px 8px rgba(0, 0, 0, 1.5)", // Add shadow for better visibility
+              }}
+            >
+              {activeItem.description}
+            </p>
+          </div>
+
+          {/* Button */}
           <div
             onClick={handleButtonClick}
             className={`
-          absolute
-          left-1/2
-          z-10
-          w-[80px]
-          h-[80px]
-          grid
-          place-items-center
-          bg-[#00ffff]
-          border-[5px]
-          border-black
-          rounded-full
-          cursor-pointer
-          transition-all
-          ease-[cubic-bezier(0.25,0.1,0.25,1.0)]
-          ${
-            isMoving
-              ? "bottom-[-80px] opacity-0 pointer-events-none duration-[100ms] scale-0 -translate-x-1/2"
-              : "bottom-[3.8em] opacity-100 pointer-events-auto duration-[500ms] scale-100 -translate-x-1/2"
-          }
-        `}
+              absolute
+              left-1/2
+              z-10
+              w-[80px]
+              h-[80px]
+              grid
+              place-items-center
+              bg-[#00ffff]
+              border-[5px]
+              border-black
+              rounded-full
+              cursor-pointer
+              transition-all
+              ease-[cubic-bezier(0.25,0.1,0.25,1.0)]
+              ${
+                isMoving
+                  ? "bottom-[-80px] opacity-0 pointer-events-none duration-[100ms] scale-0 -translate-x-1/2"
+                  : "bottom-[3.8em] opacity-100 pointer-events-auto duration-[500ms] scale-100 -translate-x-1/2"
+              }
+            `}
           >
             <p className="select-none relative text-[#060010] top-[2px] text-[26px]">
               &#x2197;
