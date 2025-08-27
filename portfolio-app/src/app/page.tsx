@@ -37,7 +37,7 @@ export default function Home() {
               </span>
             </h1>
             <h1>
-              I'm an aspiring{" "}
+              I'm a {" "}
               <span className="text-blue-800 font-bold">
                 <DecryptedText
                   text="Software Engineer"
@@ -72,7 +72,7 @@ export default function Home() {
           </DecryptedText></span>
           <p className="text-[4vw] sm:text-[3.5w] md:text-[2.5vw]">
             I'm a Junior Computer Science student at Rice University with a passion for building scalable, 
-            secure, and impactful backend systems. 
+            secure, and impactful backend systems while leveraging AI tools to enhance efficiency.
             I'm always exploring new technologies and methods to optimize 
             both my code and personal productivity, most recently demonstrated through my time interning at Clover where I got to contribute to the development and optimization of 
             their existing backend microservices.

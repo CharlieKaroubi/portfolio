@@ -1322,11 +1322,14 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [] }) => {
               top: "50%", // Center vertically
               left: "50%", // Center horizontally
               transform: "translate(-50%, -50%)", // Center the description relative to its own dimensions
+              textShadow: "2px 2px 4px rgba(0, 0, 0, 1.5)", // Add a dark shadow
             }}
             className={`
               select-none
-              max-w-[15ch]
-              text-[1.5rem]
+              max-w-[25ch]
+              text-[3vw]
+              md:text-[1.5vw]
+              lg:text-[1.4vw]
               text-center
               transition-all
               ease-[cubic-bezier(0.25,0.1,0.25,1.0)]
