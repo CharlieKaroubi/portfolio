@@ -36,7 +36,7 @@ export default function Footer() {
 
         {/* Resume */}
         <a
-          href="https://drive.google.com/file/d/1pWYGPxyKQOVCGgpsKiTym3B2LdGCVx5O/view?usp=sharing"
+          href="https://drive.google.com/file/d/1MmiPoqifrDYoNe0zdmGqT-MiuH9ptvOC/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className="text-white hover:text-gray-400 transition-colors"
